@@ -28,6 +28,9 @@ export default function NestingExample() {
           <li>
             <Link to="/topics">Topics</Link>
           </li>
+          <li>
+            <a href="https://www.apple.com/jp">Apple web site</a>
+          </li>
         </ul>
 
         <hr />
