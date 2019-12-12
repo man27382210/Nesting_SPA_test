@@ -31,6 +31,9 @@ export default function NestingExample() {
           <li>
             <a href="https://www.apple.com/jp">Apple web site</a>
           </li>
+          <li>
+            <Link to="/other">Other</Link>
+          </li>
         </ul>
 
         <hr />
@@ -42,6 +45,13 @@ export default function NestingExample() {
           <Route path="/topics">
             <Topics />
           </Route>
+          <Route
+          path="/other"
+          component={() => {
+            window.location.href = "http://127.0.0.1:3000/other.html";
+            return null;
+          }}
+        />
         </Switch>
       </div>
     </Router>
@@ -84,6 +94,13 @@ function Topics() {
         <Route path={`${path}/:topicId`}>
           <Topic />
         </Route>
+        <Route
+          path="/other"
+          component={() => {
+            window.location.href = "http://127.0.0.1:3000/other";
+            return null;
+          }}
+        />
       </Switch>
     </div>
   );
